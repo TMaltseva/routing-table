@@ -1,0 +1,159 @@
+.header {
+  padding: 16px 12px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 14px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  width: var(--column-width, auto);
+}
+
+.sortable {
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.sortable:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sortable:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.5);
+  outline-offset: -2px;
+}
+
+.active {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.label {
+  flex: 1;
+  min-width: 0;
+}
+
+.sortIconActive {
+  font-size: 16px;
+  font-weight: bold;
+  opacity: 1;
+  color: #ffffff;
+  display: inline-flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  -webkit-transition: transform 0.2s ease;
+  -moz-transition: transform 0.2s ease;
+  -o-transition: transform 0.2s ease;
+  transition: transform 0.2s ease;
+}
+
+.sortIconInactive {
+  font-size: 14px;
+  opacity: 0.6;
+  color: rgba(255, 255, 255, 0.7);
+  display: inline-flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  -webkit-transition: opacity 0.2s ease;
+  -moz-transition: opacity 0.2s ease;
+  -o-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+}
+
+.sortable:hover .sortIconInactive {
+  opacity: 0.9;
+}
+
+.sortIconActive {
+  -webkit-animation: sortChange 0.3s ease;
+  -moz-animation: sortChange 0.3s ease;
+  -o-animation: sortChange 0.3s ease;
+  animation: sortChange 0.3s ease;
+}
+
+@-webkit-keyframes sortChange {
+  0% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes sortChange {
+  0% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.widthLarge {
+  width: 40%;
+}
+
+.widthMedium {
+  width: 35%;
+}
+
+.widthSmall {
+  width: 25%;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 12px 8px;
+    font-size: 12px;
+  }
+
+  .content {
+    gap: 4px;
+  }
+
+  .sortIconActive,
+  .sortIconInactive {
+    width: 14px;
+    height: 14px;
+    font-size: 12px;
+  }
+
+  .widthLarge,
+  .widthMedium,
+  .widthSmall {
+    width: auto;
+  }
+}
