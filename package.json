@@ -1,8 +1,8 @@
 {
-  "name": "routing-table-test-task",
+  "name": "routing-table",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://TMaltseva.github.io/routing-table-test-task",
+  "homepage": "https://TMaltseva.github.io/routing-table",
   "scripts": {
     "predeploy": "npm run build",
     "start": "react-scripts start",
