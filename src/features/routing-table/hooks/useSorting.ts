@@ -5,7 +5,7 @@ import {
   SortableField,
   SortDirection
 } from '../types/routing.types';
-import { compareIpAddresses } from '../utils/ipSorting';
+import { safeCompareIpAddresses } from '../utils/ipSorting';
 
 const INITIAL_SORT_CONFIG: SortConfig = {
   field: 'destination',
@@ -19,7 +19,8 @@ export const useSorting = (routes: Route[]) => {
     switch (field) {
       case 'destination':
       case 'gateway':
-        return (a: Route, b: Route) => compareIpAddresses(a[field], b[field]);
+        return (a: Route, b: Route) =>
+          safeCompareIpAddresses(a[field], b[field]);
       case 'interface':
         return (a: Route, b: Route) => a.interface.localeCompare(b.interface);
     }
