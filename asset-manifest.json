@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/routing-table-test-task/static/css/main.1f84d41b.css",
+    "main.js": "/routing-table-test-task/static/js/main.422d2d42.js",
+    "index.html": "/routing-table-test-task/index.html",
+    "main.1f84d41b.css.map": "/routing-table-test-task/static/css/main.1f84d41b.css.map",
+    "main.422d2d42.js.map": "/routing-table-test-task/static/js/main.422d2d42.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1f84d41b.css",
+    "static/js/main.422d2d42.js"
+  ]
+}
