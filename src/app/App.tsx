@@ -21,7 +21,7 @@ export const App: React.FC = () => {
 
       <footer className={styles.footer}>
         <div className={styles.container}>
-          <p className={styles.footerText}>Routing Table Manager © 2024</p>
+          <p className={styles.footerText}>Routing Table Manager © 2025</p>
         </div>
       </footer>
     </div>
