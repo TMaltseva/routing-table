@@ -18,6 +18,22 @@ export const ipToNumber = (ip: string): number => {
   }, 0);
 };
 
+export const safeCompareIpAddresses = (a: string, b: string): number => {
+  try {
+    const numA = ipToNumber(a);
+    const numB = ipToNumber(b);
+
+    if (numA < numB) return -1;
+    if (numA > numB) return 1;
+
+    return 0;
+  } catch (error) {
+    console.warn('Invalid IP detected during sorting:', { a, b, error });
+
+    return a.localeCompare(b);
+  }
+};
+
 export const compareIpAddresses = (a: string, b: string): number => {
   const numA = ipToNumber(a);
   const numB = ipToNumber(b);
